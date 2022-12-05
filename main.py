@@ -6,8 +6,8 @@ import os
 
 # ------------------------------ SETTING ENVIRONMENT VARIABLES ------------------------------------------------
 # Set environment variables
-# os.environ['SPOTIPY_CLIENT_ID'] = '010947403e2544a8bc905882553fcc75'
-# os.environ['SPOTIPY_CLIENT_SECRET'] = '3a76a231bf47413f8e7cff10b0ae3d22'
+# os.environ['SPOTIPY_CLIENT_ID'] = Your Client ID
+# os.environ['SPOTIPY_CLIENT_SECRET'] = Your Client Secret
 #
 # # Get environment variables
 # ID = os.getenv('SPOTIPY_CLIENT_ID')
@@ -35,14 +35,13 @@ sp = spotipy.Spotify(
     auth_manager=SpotifyOAuth(
         scope="playlist-modify-private",
         redirect_uri="http://example.com",
-        client_id='010947403e2544a8bc905882553fcc75',
-        client_secret='3a76a231bf47413f8e7cff10b0ae3d22',
+        client_id= (enter your own client_id),
+        client_secret= (enter your own client_secret),
         show_dialog=True,
         cache_path="token.txt"
     )
 )
 user_id = sp.current_user()["id"]
-# 31l5qxnvovt5x72mdfib2itp76uy
 # print(user_id)
 
 # -------------------------------------- EXTRACTING SONG URLS FROM SPOTIFY ----------------------------------------
